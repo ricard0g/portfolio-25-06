@@ -12,7 +12,7 @@ import Header from "../components/Header.astro";
 		<title>Ricardo's Guzman Blog</title>
 	</head>
 	<body
-		class="bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light font-inter"
+		class="bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light font-inter transition-all duration-75"
 	>
 		<Header />
 		<main>
@@ -31,4 +31,7 @@ import Header from "../components/Header.astro";
 		width: 100%;
 		height: auto;
 	}
+	html {
+		background-color: inherit;
+}
 </style>

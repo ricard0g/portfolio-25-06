@@ -24,7 +24,7 @@ if (localStorage.getItem("theme") === "dark") {
 	themeController.checked = false;
 }
 
-// Rotate the Square on Hero Page
+// Rotate the Square on Hero Page and add blur effect on header
 
 const square = document.querySelector('.square') as HTMLDivElement;
 

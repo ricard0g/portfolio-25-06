@@ -3,7 +3,7 @@
 ---
 
 <header
-	class="fixed top-0 left-0 right-0 flex justify-between items-center w-[40%] m-auto py-4 px-8 z-10"
+	class="fixed top-2 left-0 right-0 flex justify-between items-center w-[40%] m-auto py-3 px-8 border-[1px] border-primary-dark-text dark:border-primary-dark-border z-10 backdrop-blur-sm rounded-full shadow-sm dark:shadow-primary-dark-border"
 >
 	<div>
 		<a class="flex items-center gap-2">
@@ -14,10 +14,10 @@
 			/>
 		</a>
 	</div>
-	<nav class="flex items-center">
+	<nav class="absolute left-1/2 -translate-x-1/2 flex items-center">
 		<ul class="flex gap-4">
 			<li
-				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg hover:border-b-primary-light transition-all duration-75"
+				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg  hover:border-b-primary-dark dark:hover:border-b-primary-light transition-all duration-75"
 			>
 				<a class="relative block group overflow-hidden" href="/">
 					<span
@@ -31,7 +31,7 @@
 				</a>
 			</li>
 			<li
-				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg hover:border-b-primary-light transition-all duration-75"
+				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg hover:border-b-primary-dark dark:hover:border-b-primary-light transition-all duration-75"
 			>
 				<a class="relative block group overflow-hidden" href="/about">
 					<span
@@ -45,7 +45,7 @@
 				</a>
 			</li>
 			<li
-				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg hover:border-b-primary-light transition-all duration-75"
+				class="block overflow-hidden hover:border-b-[1px] py-1 text-lg hover:border-b-primary-dark dark:hover:border-b-primary-light transition-all duration-75"
 			>
 				<a class="relative block group overflow-hidden" href="/blog">
 					<span
@@ -61,7 +61,7 @@
 		</ul>
 	</nav>
 	<div>
-		<label class="swap swap-rotate">
+		<label class="swap swap-rotate hover:bg-primary-dark/15 dark:hover:bg-primary-light/15 rounded-full p-2 transition-all duration-75">
 			<!-- this hidden checkbox controls the state -->
 			<input type="checkbox" class="theme-controller" value="synthwave" />
 
