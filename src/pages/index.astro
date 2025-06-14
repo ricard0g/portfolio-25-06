@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Home from '../components/Home.astro';
 import Layout from '../layouts/Layout.astro';
 import '../assets/app.css';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,9 @@ import '../assets/app.css';
 ---
 
 <Layout>
-	<Welcome />
+	<Home />
+	
+	<script>
+		import "../assets/app.ts";
+	</script>
 </Layout>
