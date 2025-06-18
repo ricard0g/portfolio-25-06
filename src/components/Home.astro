@@ -1,13 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 
+const posts = await getCollection("blogCollection")
 ---
 
-<section class="relative flex flex-col items-center justify-center h-screen mb-[500px]">
+<section class="relative flex flex-col items-center justify-center h-screen overflow-hidden">
 	<div
 		class="absolute h-[520px] w-[520px] bg-transparent rotate-45 border-[1px] border-primary-light-border dark:border-primary-dark-border square"
 	>
 	</div>
-	<div class="relative flex flex-col items-center justify-center gap-5 w-[550px]">
+	<div class="relative flex flex-col items-center justify-center gap-5 w-[350px] md:w-[550px]">
 		<h2 class="text-2xl text-center text-primary-light-text dark:text-primary-dark-text transition-all duration-75">Hi, I'm Ricardo Guzman</h2>
 		<h1 class="text-5xl text-center tracking-wide leading-[1.2] bg-gradient-to-r from-[#444] to-primary-dark-text dark:from-primary-dark-text dark:to-[#444] bg-clip-text text-transparent transition-all duration-75">
 			A Software Developer based in Spain
