@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -12,17 +13,20 @@ import Header from "../components/Header.astro";
 		<title>Ricardo's Guzman Blog</title>
 	</head>
 	<body
-		class="bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light font-inter transition-all duration-75"
+		class="relative bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light font-inter transition-all duration-75"
 	>
 		<Header />
+		<div class="relative overflow-hidden">
 		<main>
 			<slot />
 		</main>
+		<Footer />
+		</div>
 	</body>
 </html>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 	html,
 	body {
 		font-family: "Inter", sans-serif;
@@ -33,5 +37,5 @@ import Header from "../components/Header.astro";
 	}
 	html {
 		background-color: inherit;
-}
+	}
 </style>

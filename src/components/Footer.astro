@@ -1,0 +1,26 @@
+---
+const date = new Date().getFullYear();
+---
+
+<footer class="relative flex flex-col items-center justify-center h-96">
+	<div class="flex flex-col items-center justify-center gap-y-2 h-full">
+		<div class="flex items-center justify-center gap-x-2">
+			<div class="avatar avatar-online">
+				<div class="w-8 md:w-10 rounded-full">
+					<img
+						src="https://img.daisyui.com/images/profile/demo/gordon@192.webp"
+					/>
+				</div>
+			</div>
+			<span class="text-sm md:text-base">Ricardo Guzman</span>
+		</div>
+        <div class="w-full h-[1px] bg-primary-dark-text dark:bg-primary-dark-border"></div>
+        <div>
+            <span class="text-xs md:text-sm text-primary-dark-text dark:text-primary-light-text">{date} &copy; All Rights Reserved</span>
+        </div>
+	</div>
+	<div
+		class="absolute -bottom-52 left-1/2 -translate-x-1/2 h-[520px] w-[520px] bg-transparent rotate-45 border-[1px] border-primary-light-border dark:border-primary-dark-border square -z-10"
+	>
+	</div>
+</footer>
