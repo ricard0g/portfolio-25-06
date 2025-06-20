@@ -1,4 +1,6 @@
 ---
+layout: "../../layouts/PostLayout.astro"
+slug: "post-2"
 title: "The Second Post"
 pubDate: "2025, June 19th"
 tags: ["Second", "post"]

@@ -19,12 +19,6 @@ const sortedPosts = posts.sort(
 		Recent Blog Posts
 	</h2>
 	<div class="flex flex-col items-center justify-center w-full gap-2">
-		{
-			sortedPosts.map((post) => (
-				<Post
-            post={post}
-				/>
-			))
-		}
+		{sortedPosts.map((post) => <Post post={post} />)}
 	</div>
 </section>

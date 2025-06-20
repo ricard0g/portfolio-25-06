@@ -1,11 +1,27 @@
 ---
+import { render } from "astro:content";
 import PostLayout from "../layouts/PostLayout.astro";
-
 import { getCollection } from "astro:content";
+import "../assets/app.css";
 
-const { slug } = Astro.params;
+export async function getStaticPaths() {
+	const posts = await getCollection("blogCollection");
+	return posts.map((post) => ({
+		params: {
+			slug: post.data.slug,
+		},
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
 
-<PostLayout>
+<PostLayout frontmatter={post.data}>
+	<Content />
 
+	<script>
+		import "../assets/app.ts";
+	</script>
 </PostLayout>

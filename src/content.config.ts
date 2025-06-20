@@ -8,6 +8,7 @@ const blogCollection = defineCollection({
 		base: "./src/content/posts",
 	}),
 	schema: z.object({
+		slug: z.string(),
 		title: z.string(),
 		pubDate: z.string(),
 		updateDate: z.string().optional(),

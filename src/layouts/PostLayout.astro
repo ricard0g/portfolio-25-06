@@ -1,17 +1,119 @@
 ---
 import Header from "../components/Header.astro";
-
-
+import Footer from "../components/Footer.astro";
+import { render } from "astro:content";
+const { frontmatter } = Astro.props;
+const { Content } = await render(frontmatter);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricardo's Blog</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description:" content={frontmatter.description} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body
+		class="relative grid bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light font-inter transition-all duration-75"
+	>
+		<Header />
+		<div class="relative overflow-hidden">
+			<main
+				class="flex flex-col items-center justify-center w-[90%] md:w-[35%] m-auto mt-[100px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
+			>
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
 </html>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+	html,
+	body {
+		font-family: "Inter", sans-serif;
+		font-size: 16px;
+		margin: 0;
+		width: 100%;
+		height: auto;
+	}
+	html {
+		background-color: inherit;
+	}
+</style>
+
+<style is:global>
+	.pretty h1,
+	.pretty h2,
+	.pretty h3 {
+		letter-spacing: 0.025em;
+		line-height: 1.2;
+		background-image: linear-gradient(to right, #444, #333);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		margin-bottom: 0.5rem;
+	}
+
+	.dark .pretty h1,
+	.dark .pretty h2,
+	.dark .pretty h3 {
+		background-image: linear-gradient(to right, #eee, #ccc);
+	}
+
+	.pretty h1 {
+		font-size: 3rem;
+	}
+
+	.pretty h2 {
+		font-size: 2.25rem;
+	}
+
+	.pretty h3 {
+		font-size: 1.875rem;
+	}
+
+	.pretty p {
+		font-size: 1.125rem;
+		line-height: 1.75;
+		margin-bottom: 1rem;
+	}
+
+	.pretty a {
+		color: #3b82f6;
+		text-decoration: none;
+	}
+
+	.pretty a:hover {
+		text-decoration: underline;
+	}
+
+	.pretty code {
+		background-color: #e5e7eb;
+		border-radius: 0.25rem;
+		padding: 0.25rem 0.5rem;
+		font-size: 0.875rem;
+	}
+
+	.dark .pretty code {
+		background-color: #374151;
+	}
+
+	.pretty pre {
+		background-color: #e5e7eb;
+		border-radius: 0.25rem;
+		padding: 1rem;
+		overflow-x: auto;
+	}
+
+	.dark .pretty pre {
+		background-color: #374151;
+	}
+
+	.pretty pre code {
+		background-color: transparent;
+		padding: 0;
+	}
+</style>
