@@ -34,3 +34,17 @@ if (location.pathname === "/") {
 		square.style.transform = `rotate(${scrollY / 10}deg)`;
 	});
 }
+
+// Smooth scroll to recent posts section
+const scrollButton = document.querySelector("#scroll-to-posts") as HTMLButtonElement;
+const recentPostsSection = document.querySelector("#recent-posts") as HTMLElement;
+
+if (scrollButton && recentPostsSection) {
+	scrollButton.addEventListener("click", () => {
+		const targetPosition = recentPostsSection.offsetTop - 100;
+		window.scrollTo({
+			top: targetPosition,
+			behavior: "smooth"
+		});
+	});
+}

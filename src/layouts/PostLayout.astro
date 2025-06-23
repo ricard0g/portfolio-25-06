@@ -1,9 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { render } from "astro:content";
 const { frontmatter } = Astro.props;
-const { Content } = await render(frontmatter);
 ---
 
 <!doctype html>
@@ -11,6 +9,7 @@ const { Content } = await render(frontmatter);
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="description:" content={frontmatter.description} />
 		<title>{frontmatter.title}</title>
 	</head>
@@ -20,8 +19,12 @@ const { Content } = await render(frontmatter);
 		<Header />
 		<div class="relative overflow-hidden">
 			<main
-				class="flex flex-col items-center justify-center w-[90%] md:w-[35%] m-auto mt-[100px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
+				class="flex flex-col items-center justify-center w-[90%] md:w-[35%] m-auto mt-[100px] md:mt-[150px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
 			>
+				<h1 class="text-left text-xl md:text-3xl mb-5 bg-gradient-to-r from-[#444] to-primary-dark-text dark:from-primary-dark-text dark:to-[#444] bg-clip-text text-transparent transition-all duration-76 leading-snug">{frontmatter.title}</h1>
+				<p class="text-sm! text-left! w-full opacity-70 text-[var(--color-primary-light-text)] dark:text-[var(--color-primary-dark-text)] whitespace-nowrap">
+					{frontmatter.pubDate} - by {frontmatter.author}</p>
+				<div class="w-full h-[1px] bg-primary-dark-text dark:bg-primary-dark-border mb-5"></div>
 				<slot />
 			</main>
 			<Footer />
@@ -44,76 +47,3 @@ const { Content } = await render(frontmatter);
 	}
 </style>
 
-<style is:global>
-	.pretty h1,
-	.pretty h2,
-	.pretty h3 {
-		letter-spacing: 0.025em;
-		line-height: 1.2;
-		background-image: linear-gradient(to right, #444, #333);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		margin-bottom: 0.5rem;
-	}
-
-	.dark .pretty h1,
-	.dark .pretty h2,
-	.dark .pretty h3 {
-		background-image: linear-gradient(to right, #eee, #ccc);
-	}
-
-	.pretty h1 {
-		font-size: 3rem;
-	}
-
-	.pretty h2 {
-		font-size: 2.25rem;
-	}
-
-	.pretty h3 {
-		font-size: 1.875rem;
-	}
-
-	.pretty p {
-		font-size: 1.125rem;
-		line-height: 1.75;
-		margin-bottom: 1rem;
-	}
-
-	.pretty a {
-		color: #3b82f6;
-		text-decoration: none;
-	}
-
-	.pretty a:hover {
-		text-decoration: underline;
-	}
-
-	.pretty code {
-		background-color: #e5e7eb;
-		border-radius: 0.25rem;
-		padding: 0.25rem 0.5rem;
-		font-size: 0.875rem;
-	}
-
-	.dark .pretty code {
-		background-color: #374151;
-	}
-
-	.pretty pre {
-		background-color: #e5e7eb;
-		border-radius: 0.25rem;
-		padding: 1rem;
-		overflow-x: auto;
-	}
-
-	.dark .pretty pre {
-		background-color: #374151;
-	}
-
-	.pretty pre code {
-		background-color: transparent;
-		padding: 0;
-	}
-</style>
