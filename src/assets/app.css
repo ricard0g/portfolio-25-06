@@ -4,161 +4,227 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary-dark: #111;
-    --color-primary-light: #EEE;
-    --color-primary-dark-text: #CCC;
-    --color-primary-dark-border: #333;
-    --color-primary-light-border: #CCC;
+	--color-primary-dark: #111;
+	--color-primary-light: #eee;
+	--color-primary-dark-text: #ccc;
+	--color-primary-dark-border: #333;
+	--color-primary-light-border: #ccc;
 }
 
+.pretty h2,
+.pretty h3 {
+	letter-spacing: 0.025em;
+	line-height: 1.2;
+	background-image: linear-gradient(to right, #444, #b0b0b0);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	margin-bottom: 0.5rem;
+	text-align: left;
+	width: 100%;
+	margin: 1.5rem 0;
+}
 
-	.pretty h2,
-	.pretty h3 {
-		letter-spacing: 0.025em;
-		line-height: 1.2;
-		background-image: linear-gradient(to right, #444, #b0b0b0);
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		margin-bottom: 0.5rem;
-		text-align: left;
-		width: 100%;
-		margin: 1.5rem 0;
-	}
+.dark .pretty h2,
+.dark .pretty h3 {
+	background-image: linear-gradient(to right, #b0b0b0, #444);
+}
 
-	.dark .pretty h2,
-	.dark .pretty h3 {
-		background-image: linear-gradient(to right, #b0b0b0, #444);
-	}
+.pretty h2 {
+	font-size: 1.5rem;
+}
 
+.pretty h3 {
+	font-size: 1.25rem;
+}
+
+.pretty p {
+	font-size: 1rem;
+	line-height: 1.75;
+	margin-bottom: 1.5rem;
+}
+
+.dark .pretty p {
+	color: #ccc;
+}
+
+.pretty blockquote {
+	border-left: 4px solid #444;
+	background-color: rgba(176, 176, 176, 0.3);
+	padding: 1rem 1.5rem;
+	margin: 1.5rem 0;
+	font-style: italic;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--color-primary-light-text);
+	border-radius: 0 0.375rem 0.375rem 0;
+	opacity: 0.9;
+	width: 100%;
+}
+
+.dark .pretty blockquote {
+	background-color: rgba(68, 68, 68, 0.3);
+	color: var(--color-primary-dark-text);
+	border-left-color: #b0b0b0;
+}
+
+.pretty blockquote p {
+	margin: 0;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.pretty a {
+	color: #3b82f6;
+	text-decoration: none;
+}
+
+.pretty a:hover {
+	text-decoration: underline;
+}
+
+.pretty code {
+	background-color: #c3c6cc;
+	border-radius: 0.25rem;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+}
+
+.dark .pretty code {
+	background-color: #374151;
+}
+
+.pretty pre {
+	background-color: #e5e7eb;
+	border-radius: 0.25rem;
+	padding: 1rem;
+	margin: 1.5rem 0;
+	overflow-x: auto;
+	max-width: 100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.dark .pretty pre {
+	background-color: #374151;
+}
+
+.pretty pre > code {
+	background-color: transparent !important;
+	padding: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.pretty ul,
+.pretty ol {
+	margin: 0.5rem 0;
+	padding-left: 2rem;
+	line-height: 1.75;
+}
+
+.pretty ul {
+	list-style-type: disc;
+}
+
+.pretty ol {
+	list-style-type: decimal;
+}
+
+.pretty li {
+	font-size: 1rem;
+	line-height: 1.75;
+	margin-bottom: 0.5rem;
+	color: inherit;
+}
+
+.dark .pretty li {
+	color: #ccc;
+}
+
+.pretty li:last-child {
+	margin-bottom: 0;
+}
+
+.pretty li strong {
+	font-weight: 600;
+	color: #374151;
+}
+
+.dark .pretty li strong {
+	color: #d1d5db;
+}
+
+/* Nested lists */
+.pretty ul ul,
+.pretty ol ol,
+.pretty ul ol,
+.pretty ol ul {
+	margin: 0.5rem 0;
+	padding-left: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
 	.pretty h2 {
-		font-size: 1.5rem;
-	}
-
-	.pretty h3 {
 		font-size: 1.25rem;
 	}
 
-	.pretty p {
-		font-size: 1rem;
-		line-height: 1.75;
-		margin-bottom: 1.5rem;
+	.pretty h3 {
+		font-size: 1.125rem;
 	}
-	
-	.dark .pretty p {
-		color: #ccc;
+
+	.pretty p {
+		font-size: 0.875rem;
+		line-height: 1.6;
+		margin-bottom: 1.25rem;
 	}
 
 	.pretty blockquote {
-		border-left: 4px solid #444;
-		background-color: rgba(176, 176, 176, 0.3);
-		padding: 1rem 1.5rem;
-		margin: 1.5rem 0;
-		font-style: italic;
-		font-size: 1rem;
-		line-height: 1.6;
-		color: var(--color-primary-light-text);
-		border-radius: 0 0.375rem 0.375rem 0;
-		opacity: 0.9;
+		font-size: 0.875rem;
+		padding: 0.5rem 1rem;
+		margin: 1rem 0;
 		width: 100%;
 	}
 
-	.dark .pretty blockquote {
-		background-color: rgba(68, 68, 68, 0.3);
-		color: var(--color-primary-dark-text);
-		border-left-color: #b0b0b0;
-	}
-
-	.pretty blockquote p {
-		margin: 0;
-		font-size: inherit;
-		line-height: inherit;
-	}
-
 	.pretty a {
-		color: #3b82f6;
-		text-decoration: none;
-	}
-
-	.pretty a:hover {
-		text-decoration: underline;
-	}
-
-	.pretty code {
-		background-color: #c3c6cc;
-		border-radius: 0.25rem;
-		padding: 0.25rem 0.5rem;
 		font-size: 0.875rem;
 	}
 
-	.dark .pretty code {
-		background-color: #374151;
+	.pretty code {
+		font-size: 0.875rem;
+		padding: 0.2rem 0.4rem;
 	}
 
 	.pretty pre {
-		background-color: #e5e7eb;
-		border-radius: 0.25rem;
-		padding: 1rem;
-		margin: 1.5rem 0;
+		padding: 0.75rem;
+		margin: 1rem 0;
+		font-size: 0.875rem;
+		border-radius: 0.375rem;
 		overflow-x: auto;
-		max-width: 100%;
-		white-space: pre-wrap;
-		word-wrap: break-word;
+		max-width: calc(100vw - 2rem);
 	}
 
-	.dark .pretty pre {
-		background-color: #374151;
+	.pretty pre code {
+		font-size: 0.75rem;
 	}
 
-	.pretty pre > code {
-		background-color: transparent !important;
-		padding: 0;
-		white-space: pre-wrap;
-		word-wrap: break-word;
+	.pretty ul,
+	.pretty ol {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
 	}
-	
-	@media only screen and (max-width: 768px) {
-		.pretty h2 {
-			font-size: 1.25rem;
-		}
 
-		.pretty h3 {
-			font-size: 1.125rem;
-		}
+	.pretty li {
+		font-size: 0.875rem;
+		line-height: 1.6;
+		margin-bottom: 0.375rem;
+	}
 
-		.pretty p {
-			font-size: 0.875rem;
-			line-height: 1.6;
-			margin-bottom: 1.25rem;
-		}
-
-		.pretty blockquote {
-			font-size: 0.875rem;
-			padding: 0.5rem 1rem;
-			margin: 1rem 0;
-			width: 100%;
-		}
-
-		.pretty a {
-			font-size: 0.875rem;
-		}
-
-		.pretty code {
-			font-size: 0.875rem;
-			padding: 0.2rem 0.4rem;
-		}
-
-		.pretty pre {
-			padding: 0.75rem;
-			margin: 1rem 0;
-			font-size: 0.875rem;
-			border-radius: 0.375rem;
-			overflow-x: auto;
-			max-width: calc(100vw - 2rem);
-		}
-
-		.pretty pre code {
-			font-size: 0.75rem;
-		}
-    
-    }
+	.pretty ul ul,
+	.pretty ol ol,
+	.pretty ul ol,
+	.pretty ol ul {
+		margin: 0.375rem 0;
+		padding-left: 1.25rem;
+	}
+}

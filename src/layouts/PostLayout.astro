@@ -21,11 +21,35 @@ const { frontmatter } = Astro.props;
 			<main
 				class="flex flex-col items-start justify-center w-[90%] md:w-[35%] m-auto mt-[100px] md:mt-[150px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
 			>
-				<button onclick="window.history.back()" class="text-sm md:text-base my-4 hover:underline cursor-pointer">← back</button>
-				<h1 class="text-left text-xl md:text-3xl mb-5 bg-gradient-to-r from-[#444] to-primary-dark-text dark:from-primary-dark-text dark:to-[#444] bg-clip-text text-transparent transition-all duration-76 leading-snug">{frontmatter.title}</h1>
-				<p class="text-sm! text-left! w-full opacity-70 text-[var(--color-primary-light-text)] dark:text-[var(--color-primary-dark-text)] whitespace-nowrap">
-					{frontmatter.pubDate} - by {frontmatter.author}</p>
-				<div class="w-full h-[1px] bg-primary-dark-text dark:bg-primary-dark-border mb-5"></div>
+				<button
+					onclick="window.history.back()"
+					class="text-sm md:text-base my-4 hover:underline cursor-pointer"
+					>← back</button
+				>
+				<h1
+					class="text-left text-xl md:text-3xl mb-5 bg-gradient-to-r from-[#444] to-primary-dark-text dark:from-primary-dark-text dark:to-[#444] bg-clip-text text-transparent transition-all duration-76 leading-snug"
+				>
+					{frontmatter.title}
+				</h1>
+				<p
+					class="text-sm! text-left! w-full opacity-70 text-[var(--color-primary-light-text)] dark:text-[var(--color-primary-dark-text)] whitespace-nowrap"
+				>
+					{frontmatter.pubDate} - by {frontmatter.author}
+				</p>
+
+				<div class="flex flex-wrap gap-2 mb-6">
+					{
+						frontmatter.tags.map((tag: string) => (
+							<span class="badge rounded-full px-3 py-1 text-xs font-medium backdrop-blur-sm border border-[var(--color-primary-light-border)] dark:border-[var(--color-primary-dark-border)] bg-[rgba(0,0,0,0.05)] dark:bg-[rgba(255,255,255,0.07)] text-[var(--color-primary-dark)] dark:text-[var(--color-primary-light)] shadow-sm">
+								{tag}
+							</span>
+						))
+					}
+				</div>
+				<div
+					class="w-full h-[1px] bg-primary-dark-text dark:bg-primary-dark-border mb-5"
+				>
+				</div>
 				<slot />
 			</main>
 			<Footer />
@@ -47,4 +71,3 @@ const { frontmatter } = Astro.props;
 		background-color: inherit;
 	}
 </style>
-

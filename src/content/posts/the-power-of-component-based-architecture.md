@@ -1,16 +1,14 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-slug: "post-1"
+slug: "the-power-of-component-based-architecture"
 title: "The Power of Component-Based Architecture"
 pubDate: "2025, June 18th"
-tags: ["first", "post"]
+tags: ["Frontend", "React", "Vue", "Svelte", "Components"]
 author: "Ricardo Guzman"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, augue id dapibus hendrerit, lectus nulla vehicula arcu, et fringilla massa justo a diam. Quisque mi metus, ultrices non ex eu, facilisis tristique neque. Praesent luctus efficitur magna in lacinia."
+description: "Here I talk about what is a Component-Based architecture, its benefits and an example of a component."
 ---
 
 In the ever-evolving landscape of web development, the shift towards component-based architecture has been a game-changer. Frameworks like React, Vue, and Svelte have championed this approach, and for good reason. It fundamentally changes how we think about and build user interfaces.
-
-> Hello this is an example quote block to see if it's being styled
 
 ## What are Components?
 
