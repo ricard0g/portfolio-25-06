@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Post from "../components/Post.astro";
+import Layout from "../layouts/Layout.astro";
+import "../assets/app.css";
+import RecentPosts from "../components/RecentPosts.astro";
+
+const posts = await getCollection("blogCollection");
+
+const sortedPosts = posts.sort((a, b) => {
+	return (
+		new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+	);
+});
+---
+
+<Layout>
+	<div class="flex flex-col items-center justify-center mt-[100px]">
+		<RecentPosts posts={sortedPosts} title="Blog Posts" />
+	</div>
+
+	<script>
+		import "../assets/app.ts";
+	</script>
+</Layout>

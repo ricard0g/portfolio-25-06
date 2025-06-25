@@ -19,8 +19,9 @@ const { frontmatter } = Astro.props;
 		<Header />
 		<div class="relative overflow-hidden">
 			<main
-				class="flex flex-col items-center justify-center w-[90%] md:w-[35%] m-auto mt-[100px] md:mt-[150px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
+				class="flex flex-col items-start justify-center w-[90%] md:w-[35%] m-auto mt-[100px] md:mt-[150px] mb-[100px] min-h-dvh text-left text-primary-dark dark:text-primary-light pretty"
 			>
+				<button onclick="window.history.back()" class="text-sm md:text-base my-4 hover:underline cursor-pointer">← back</button>
 				<h1 class="text-left text-xl md:text-3xl mb-5 bg-gradient-to-r from-[#444] to-primary-dark-text dark:from-primary-dark-text dark:to-[#444] bg-clip-text text-transparent transition-all duration-76 leading-snug">{frontmatter.title}</h1>
 				<p class="text-sm! text-left! w-full opacity-70 text-[var(--color-primary-light-text)] dark:text-[var(--color-primary-dark-text)] whitespace-nowrap">
 					{frontmatter.pubDate} - by {frontmatter.author}</p>
