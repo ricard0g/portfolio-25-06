@@ -4,6 +4,12 @@ const themeController = document.querySelector(
 ) as HTMLInputElement;
 const root = document.querySelector("html") as HTMLHtmlElement;
 
+// Initialize theme controller state based on current HTML class
+const initializeThemeController = () => {
+	const isDark = root.classList.contains("dark");
+	themeController.checked = isDark;
+};
+
 const toggleTheme = () => {
 	if (themeController.checked) {
 		root.classList.add("dark");
@@ -14,15 +20,11 @@ const toggleTheme = () => {
 	}
 };
 
-themeController.addEventListener("change", toggleTheme);
+// Initialize the theme controller to match current state
+initializeThemeController();
 
-if (localStorage.getItem("theme") === "dark") {
-	root.classList.add("dark");
-	themeController.checked = true;
-} else {
-	root.classList.remove("dark");
-	themeController.checked = false;
-}
+// Add event listener for theme changes
+themeController.addEventListener("change", toggleTheme);
 
 // Rotate the Square on Hero Page and add blur effect on header
 
