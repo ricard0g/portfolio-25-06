@@ -9,8 +9,6 @@ description:
     "Discover how event delegation can transform your JavaScript from a memory-hogging monster into a lean, mean, performance machine. Learn the one weird trick that makes your code faster and your future self happier."
 ---
 
-# Stop Adding Event Listeners to Everything: The Event Delegation Magic Trick
-
 Picture this: You're at a party, and instead of having one bouncer at the entrance, you hire a personal security guard for each guest. Sounds ridiculous, right? That's exactly what most developers do with JavaScript event listeners.
 
 ## What the Heck is Event Delegation?
