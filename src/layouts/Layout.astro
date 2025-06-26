@@ -23,6 +23,12 @@ const { title, description } = Astro.props;
 				// Default to dark theme if no preference is saved
 				if (savedTheme === 'dark' || (!savedTheme && true)) {
 					html.classList.add('dark');
+
+// html.dark .shiki,
+// html.dark .shiki span {
+//   color: var(--shiki-dark) !important;
+//   background-color: var(--shiki-dark-bg) !important;
+// }
 				} else {
 					html.classList.remove('dark');
 				}
