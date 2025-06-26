@@ -5,6 +5,7 @@ title: "The Power of Component-Based Architecture"
 pubDate: "2025, June 18th"
 tags: ["Frontend", "React", "Vue", "Svelte", "Components"]
 author: "Ricardo Guzman"
+image: "https://images.pexels.com/photos/962312/pexels-photo-962312.jpeg"
 description: "Here I talk about what is a Component-Based architecture, its benefits and an example of a component."
 ---
 

@@ -5,6 +5,7 @@ title: "Stop Adding Event Listeners to Everything: The Event Delegation Magic Tr
 pubDate: "2025, January 15th"
 tags: ["JavaScript", "Performance", "Web Development", "Event Handling"]
 author: "Ricardo Guzman"
+image: "https://images.pexels.com/photos/1793525/pexels-photo-1793525.jpeg"
 description:
     "Discover how event delegation can transform your JavaScript from a memory-hogging monster into a lean, mean, performance machine. Learn the one weird trick that makes your code faster and your future self happier."
 ---
