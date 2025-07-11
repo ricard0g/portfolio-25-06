@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 slug: "its-not-a-but-its-a-mirror"
 title: "It's not a bug, it's a mirror"
-pubDate: 2025-07-11
+pubDate: "2025, July 11th"
 tags: ["Personal Finding", "Philosophy"]
 author: "Ricardo Guzman"
 image: "https://images.pexels.com/photos/1386454/pexels-photo-1386454.jpeg"
