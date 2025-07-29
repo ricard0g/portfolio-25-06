@@ -2,7 +2,8 @@
 layout: "../../layouts/PostLayout.astro"
 slug: "gemini-cli-setup-with-workspace-account"
 title: "Gemini CLI Setup using a Google Workspace Account"
-pubDate: "2025, June 26th"
+pubDateString: "2025, June 26th"
+pubDate: 2025-06-26
 tags: ["Gemini", "CLI", "Google Cloud", "AI"]
 author: "Ricardo Guzman"
 image: "https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg"

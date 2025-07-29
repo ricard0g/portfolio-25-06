@@ -2,7 +2,8 @@
 layout: "../../layouts/PostLayout.astro"
 slug: "the-power-of-component-based-architecture"
 title: "The Power of Component-Based Architecture"
-pubDate: "2025, June 18th"
+pubDateString: "2025, June 18th"
+pubDate: 2025-06-18
 tags: ["Frontend", "React", "Vue", "Svelte", "Components"]
 author: "Ricardo Guzman"
 image: "https://images.pexels.com/photos/962312/pexels-photo-962312.jpeg"

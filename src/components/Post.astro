@@ -1,7 +1,7 @@
 ---
 const { post } = Astro.props;
 
-const { slug, title, pubDate, tags, description } = post.data;
+const { slug, title, pubDate, pubDateString, tags, description } = post.data;
 ---
 
 <article
@@ -17,7 +17,7 @@ const { slug, title, pubDate, tags, description } = post.data;
       datetime={pubDate}
       class="text-sm opacity-70 text-[var(--color-primary-light-text)] dark:text-[var(--color-primary-dark-text)] whitespace-nowrap"
     >
-      {pubDate}
+      {pubDateString}
     </time>
     </a>
   </div>
