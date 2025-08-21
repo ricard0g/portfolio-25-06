@@ -1,3 +1,4 @@
+
 ---
 import { getCollection } from "astro:content";
 import Post from "./Post.astro";
@@ -21,6 +22,6 @@ const sortedPosts = posts.sort(
 		{title}
 	</h2>
 	<div class="flex flex-col items-center justify-center w-full gap-2">
-    {sortedPosts.slice(0, 3).map((post) => <Post post={post} />)}
+    {sortedPosts.map((post) => <Post post={post} />)}
 	</div>
 </section>
