@@ -1,18 +1,18 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 slug: "sync-obsidian-with-git-and-github"
-title: Setup Obsidian Git & GitHub Sync
+title: "Sync Obsidian with Git & GitHub"
 pubDateString: "2025, August 20th"
 pubDate: 2025-08-20
 tags: ["Obsidian", "Git", "Github", "Linux", "MacOS"]
 author: "Ricardo Guzman"
 image: "https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg"
-description:  "Follow this blog post to setup your Obsidian Vault syncing with Git & GitHub."
+description: "Follow this blog post to setup your Obsidian Vault syncing with Git & GitHub."
 ---
 
 I've been looking a way to sync my Obsidian Vault between my Mac and Linux machine.
 
-Yeah, I know that there's Dropbox, but I knew that ***Git/GitHub*** was an alternative that has two strong points for me:
+Yeah, I know that there's Dropbox, but I knew that **_Git/GitHub_** was an alternative that has two strong points for me:
 
 1. **Free**
 2. **I just knew that a Version Control System was possible and I wanted that**
@@ -49,7 +49,7 @@ Now we need to convert our Obsidian Vault into a Git repo and connect it to GitH
 # Initialize the git repo
 git init
 
-# IMPORTANT -> Create a .gitignore file. this will save you A LOT of headaches trust me. 
+# IMPORTANT -> Create a .gitignore file. this will save you A LOT of headaches trust me.
 
 # PD: This is the one I have and works for me, of course if you think that other files should be ignore you're to ignore them
 
@@ -91,8 +91,8 @@ Let's download and configure the plugin that will make things possible.
 2. You should install the one created by _"Vinzent (Denis Olehov)"_
 3. Install and enable the blueprint.
 4. Now that you have enabled the plugin, you're free to configure things as you prefer. I recommend these two:
-	1. **Pull On Startup**
-	2. **Vault Backup Interval**: select the intervals you want to pull and push changes.
+   1. **Pull On Startup**
+   2. **Vault Backup Interval**: select the intervals you want to pull and push changes.
 
 ## Getting your GitHub Vault on a different machine
 
@@ -108,8 +108,8 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 _This is the same repo URL from before_
 
 3. Open in Obsidian:
-	- Launch Obsidian
-	- Choose _"Open Folder as Vault"_ and select your newly cloned repo
+   - Launch Obsidian
+   - Choose _"Open Folder as Vault"_ and select your newly cloned repo
 4. Install and enable the **Git** plugin and configure it the same way.
 
 ## Conclusion
@@ -119,3 +119,4 @@ That's it for this process.
 That's the process I followed and now I'm really happy with my syncing through GitHub.
 
 Enjoy your free syncing.
+
