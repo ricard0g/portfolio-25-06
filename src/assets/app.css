@@ -11,6 +11,27 @@
 	--color-primary-light-border: #ccc;
 }
 
+/* Gradient heading with proper fallback */
+.gradient-heading {
+	/* Fallback for browsers that don't support background-clip: text */
+	color: #444;
+}
+
+.dark .gradient-heading {
+	color: #ccc;
+}
+
+/* Only apply transparent text if background-clip is supported */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+	.gradient-heading {
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+
 .pretty h2,
 .pretty h3 {
 	letter-spacing: 0.025em;
