@@ -4,178 +4,182 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-primary-dark: #111;
-	--color-primary-light: #eee;
-	--color-primary-dark-text: #ccc;
-	--color-primary-dark-border: #333;
-	--color-primary-light-border: #ccc;
+  --color-primary-dark: #111;
+  --color-primary-light: #eee;
+  --color-primary-dark-text: #ccc;
+  --color-primary-dark-border: #333;
+  --color-primary-light-border: #ccc;
 }
 
 /* Gradient heading with proper fallback */
 .gradient-heading {
-	/* Fallback for browsers that don't support background-clip: text */
-	color: #444;
+  /* Fallback for browsers that don't support background-clip: text */
+  color: #444;
 }
 
 .dark .gradient-heading {
-	color: #ccc;
+  color: #ccc;
 }
 
 /* Only apply transparent text if background-clip is supported */
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-	.gradient-heading {
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		-webkit-text-fill-color: transparent;
-	}
+  .gradient-heading {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-
 .pretty h2,
-.pretty h3 {
-	letter-spacing: 0.025em;
-	line-height: 1.2;
-	background-image: linear-gradient(to right, #444, #b0b0b0);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	margin-bottom: 0.5rem;
-	text-align: left;
-	width: 100%;
-	margin: 1.5rem 0;
+.pretty h3,
+.pretty h4,
+.pretty h5,
+.pretty h6 {
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  background-image: linear-gradient(to right, #444, #b0b0b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
+  margin: 1.5rem 0;
 }
 
 .dark .pretty h2,
-.dark .pretty h3 {
-	background-image: linear-gradient(to right, #b0b0b0, #444);
+.dark .pretty h3,
+.dark .pretty h4,
+.dark .pretty h5,
+.dark .pretty h6 {
+  background-image: linear-gradient(to right, #b0b0b0, #444);
 }
 
 .pretty h2 {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .pretty h3 {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .pretty p {
-	font-size: 1rem;
-	line-height: 1.75;
-	margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
 }
 
 .dark .pretty p {
-	color: #ccc;
+  color: #ccc;
 }
 
 .pretty blockquote {
-	border-left: 4px solid #444;
-	background-color: rgba(176, 176, 176, 0.3);
-	padding: 1rem 1.5rem;
-	margin: 1.5rem 0;
-	font-style: italic;
-	font-size: 1rem;
-	line-height: 1.6;
-	color: var(--color-primary-light-text);
-	border-radius: 0 0.375rem 0.375rem 0;
-	opacity: 0.9;
-	width: 100%;
+  border-left: 4px solid #444;
+  background-color: rgba(176, 176, 176, 0.3);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-primary-light-text);
+  border-radius: 0 0.375rem 0.375rem 0;
+  opacity: 0.9;
+  width: 100%;
 }
 
 .dark .pretty blockquote {
-	background-color: rgba(68, 68, 68, 0.3);
-	color: var(--color-primary-dark-text);
-	border-left-color: #b0b0b0;
+  background-color: rgba(68, 68, 68, 0.3);
+  color: var(--color-primary-dark-text);
+  border-left-color: #b0b0b0;
 }
 
 .pretty blockquote p {
-	margin: 0;
-	font-size: inherit;
-	line-height: inherit;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .pretty a {
-	color: #3b82f6;
-	text-decoration: none;
+  color: #3b82f6;
+  text-decoration: none;
 }
 
 .pretty a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .pretty code {
-	background-color: #c3c6cc;
-	border-radius: 0.25rem;
-	padding: 0.25rem 0.5rem;
-	font-size: 0.875rem;
+  background-color: #c3c6cc;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
 }
 
 .dark .pretty code {
-	background-color: #374151;
+  background-color: #374151;
 }
 
-
 .pretty pre {
-	background-color: #e5e7eb;
-	border-radius: 0.25rem;
-	padding: 1rem;
-	margin: 1.5rem 0;
-	overflow-x: auto;
-	max-width: 100%;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .dark .pretty pre {
-	background-color: #374151;
+  background-color: #374151;
 }
 
 .pretty pre > code {
-	background-color: transparent !important;
-	padding: 0;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+  background-color: transparent !important;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .pretty ul,
 .pretty ol {
-	margin: 0.5rem 0;
-	padding-left: 2rem;
-	line-height: 1.75;
+  margin: 0.5rem 0;
+  padding-left: 2rem;
+  line-height: 1.75;
 }
 
 .pretty ul {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 
 .pretty ol {
-	list-style-type: decimal;
+  list-style-type: decimal;
 }
 
 .pretty li {
-	font-size: 1rem;
-	line-height: 1.75;
-	margin-bottom: 0.5rem;
-	color: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  color: inherit;
 }
 
 .dark .pretty li {
-	color: #ccc;
+  color: #ccc;
 }
 
 .pretty li:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .pretty li strong {
-	font-weight: 800;
-	color: #374151;
+  font-weight: 800;
+  color: #374151;
 }
 
 .dark .pretty li strong {
-	color: #d1d5db;
+  color: #d1d5db;
 }
 
 /* Nested lists */
@@ -183,137 +187,137 @@
 .pretty ol ol,
 .pretty ul ol,
 .pretty ol ul {
-	margin: 0.5rem 0;
-	padding-left: 1.5rem;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
 }
 
 /* Tables */
 .pretty table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 1.5rem 0;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	overflow-x: auto;
-	display: block;
-	white-space: nowrap;
-	border: 1px solid #d1d5db;
-	border-radius: 0.375rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
 }
 
 .dark .pretty table {
-	border-color: #555;
+  border-color: #555;
 }
 
 .pretty thead {
-	background-color: #e5e7eb;
+  background-color: #e5e7eb;
 }
 
 .dark .pretty thead {
-	background-color: #333;
+  background-color: #333;
 }
 
 .pretty th,
 .pretty td {
-	padding: 0.75rem 1rem;
-	text-align: left;
-	border-bottom: 1px solid #d1d5db;
-	vertical-align: top;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+  vertical-align: top;
 }
 
 .dark .pretty th,
 .dark .pretty td {
-	border-bottom-color: #555;
+  border-bottom-color: #555;
 }
 
 .pretty th {
-	font-weight: 600;
-	color: #374151;
-	background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  background-color: #f9fafb;
 }
 
 .dark .pretty th {
-	color: #ccc;
-	background-color: #333;
+  color: #ccc;
+  background-color: #333;
 }
 
 .pretty td {
-	color: #6b7280;
+  color: #6b7280;
 }
 
 .dark .pretty td {
-	color: #ccc;
+  color: #ccc;
 }
 
 .pretty tbody tr:hover {
-	background-color: #f9fafb;
+  background-color: #f9fafb;
 }
 
 .dark .pretty tbody tr:hover {
-	background-color: #444;
+  background-color: #444;
 }
 
 @media only screen and (max-width: 768px) {
-	.pretty h2 {
-		font-size: 1.25rem;
-	}
+  .pretty h2 {
+    font-size: 1.25rem;
+  }
 
-	.pretty h3 {
-		font-size: 1.125rem;
-	}
+  .pretty h3 {
+    font-size: 1.125rem;
+  }
 
-	.pretty p {
-		font-size: 0.875rem;
-		line-height: 1.6;
-		margin-bottom: 1.25rem;
-	}
+  .pretty p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
 
-	.pretty blockquote {
-		font-size: 0.875rem;
-		padding: 0.5rem 1rem;
-		margin: 1rem 0;
-		width: 100%;
-	}
+  .pretty blockquote {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    width: 100%;
+  }
 
-	.pretty a {
-		font-size: 0.875rem;
-	}
+  .pretty a {
+    font-size: 0.875rem;
+  }
 
-	.pretty code {
-		font-size: 0.875rem;
-		padding: 0.2rem 0.4rem;
-	}
+  .pretty code {
+    font-size: 0.875rem;
+    padding: 0.2rem 0.4rem;
+  }
 
-	.pretty pre {
-		padding: 0.75rem;
-		margin: 1rem 0;
-		font-size: 0.875rem;
-		border-radius: 0.375rem;
-		overflow-x: auto;
-		max-width: calc(100vw - 2rem);
-	}
+  .pretty pre {
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+    max-width: calc(100vw - 2rem);
+  }
 
-	.pretty pre code {
-		font-size: 0.75rem;
-	}
+  .pretty pre code {
+    font-size: 0.75rem;
+  }
 
-	.pretty ul,
-	.pretty ol {
-		margin: 1rem 0;
-		padding-left: 1.5rem;
-	}
+  .pretty ul,
+  .pretty ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
 
-	.pretty li {
-		font-size: 0.875rem;
-		line-height: 1.6;
-		margin-bottom: 0.375rem;
-	}
+  .pretty li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.375rem;
+  }
 
-	.pretty ul ul,
-	.pretty ol ol,
-	.pretty ul ol,
-	.pretty ol ul {
-		margin: 0.375rem 0;
-		padding-left: 1.25rem;
-	}
+  .pretty ul ul,
+  .pretty ol ol,
+  .pretty ul ol,
+  .pretty ol ul {
+    margin: 0.375rem 0;
+    padding-left: 1.25rem;
+  }
 }

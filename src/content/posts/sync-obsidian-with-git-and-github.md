@@ -45,7 +45,7 @@ Now we need to convert our Obsidian Vault into a Git repo and connect it to GitH
 1. Open a terminal window and go to your Obsidian's Vault Directory. You can usually find the path in Obsidian by right-clicking on the vault name in the left sidebar and selecting "Show in system explorer" (or similar)
 2. Run these commands:
 
-```Bash
+```bash
 # Initialize the git repo
 git init
 
@@ -119,4 +119,3 @@ That's it for this process.
 That's the process I followed and now I'm really happy with my syncing through GitHub.
 
 Enjoy your free syncing.
-
