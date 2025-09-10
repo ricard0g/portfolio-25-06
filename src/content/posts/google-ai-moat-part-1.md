@@ -15,7 +15,6 @@ tags:
     "NVIDIA",
     "Algorithms",
     "Machine Learning",
-    "Artificial Intelligence",
   ]
 author: "Ricardo Guzman"
 image: "https://images.pexels.com/photos/425160/pexels-photo-425160.jpeg"
