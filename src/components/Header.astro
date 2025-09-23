@@ -6,7 +6,7 @@
 	class="fixed top-2 left-0 right-0 flex justify-between items-center w-[90%] md:w-[35%] m-auto py-2 px-3 border-[1px] border-primary-dark-text dark:border-primary-dark-border dark:bg-primary-dark-border/20 bg-primary-light-border/20 z-10 backdrop-blur-sm rounded-full shadow-sm dark:shadow-primary-dark-border"
 >
 	<div>
-		<div class="avatar avatar-online">
+    <div class="avatar avatar-online">
 			<div class="w-8 md:w-10 rounded-full">
 				<img
 					src="/profile_pic.webp"
@@ -62,32 +62,41 @@
 			</li>
 		</ul>
 	</nav>
-  <div>
-    <button aria-label="Menu" id="menu-header" class="p-2 hover:bg-primary-dark/15 dark:hover:bg-primary-light/15 rounded-full transition-all duration-75 cursor-pointer">
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
-    </button>
-  </div>
-  <div class=`absolute flex items-center justify-center top-0 mt-16  left-3 md:left-6  p-4 w-11/12 border-[1px] border-primary-dark-text dark:border-primary-dark-border dark:bg-primary-dark-border/90 bg-primary-light-border/20 rounded-xl shadow-sm dark:shadow-primary-dark-border  hidden ` id="menu-header-list">
-    <ul class="">
+	<div>
+		<button
+			aria-label="Menu"
+			aria-expanded="false"
+			id="menu-header"
+			class="p-2 hover:bg-primary-dark/15 dark:hover:bg-primary-light/15 rounded-full transition-all duration-75 cursor-pointer"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="lucide lucide-menu-icon lucide-menu"
+			>
+				<path d="M4 5h16" />
+				<path d="M4 12h16" />
+				<path d="M4 19h16" />
+			</svg>
+		</button>
+	</div>
+	<div
+		id="menu-header-list"
+		data-open="false"
+		class="absolute flex items-center justify-center top-0 mt-16 left-3 md:left-6 p-4 w-11/12 border-[1px] border-primary-dark-text dark:border-primary-dark-border dark:bg-primary-dark/95 bg-primary-light/95 rounded-xl shadow-sm dark:shadow-primary-dark-border backdrop-blur-sm transform -translate-y-4 opacity-0 pointer-events-none transition-all duration-300 ease-out data-[open=true]:translate-y-0 data-[open=true]:opacity-100 data-[open=true]:pointer-events-auto"
+	>
+		<ul class="">
 			<li
 				class="block overflow-hidden hover:border-b-[1px] py-1 text-sm md:text-base hover:border-b-primary-dark dark:hover:border-b-primary-light transition-all duration-75"
 			>
-				<a class="relative block group overflow-hidden" href="/blog">
-					<span
-						class="inline-block group-hover:-translate-y-full transition-transform duration-300"
-						>Books</span
-					>
-					<span
-						class="absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300"
-						>Books</span
-					>
-				</a>
-			</li>
-			<li
-				class="block overflow-hidden hover:border-b-[1px] py-1 text-sm md:text-base hover:border-b-primary-dark dark:hover:border-b-primary-light transition-all duration-75"
-			>
-				<a class="relative block group overflow-hidden" href="/blog">
+        <a class="relative block group overflow-hidden" href="/books">
 					<span
 						class="inline-block group-hover:-translate-y-full transition-transform duration-300"
 						>Books</span

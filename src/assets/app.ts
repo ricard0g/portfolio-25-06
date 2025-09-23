@@ -57,11 +57,19 @@ if (scrollButton && recentPostsSection) {
 
 // Open Menu from Header
 
-const menuButton = document.getElementById("menu-header") as HTMLDivElement;
-const menu = document.getElementById("menu-header-list") as HTMLDivElement;
+const menuButton = document.getElementById("menu-header") as HTMLButtonElement | null;
+const menu = document.getElementById("menu-header-list") as HTMLDivElement | null;
 
-const toggleMenu = (): void => {
-  menu.classList.toggle("hidden");
-};
+if (menuButton && menu) {
+  const setMenuState = (open: boolean) => {
+    menu.dataset.open = String(open);
+    menuButton.setAttribute("aria-expanded", String(open));
+  };
 
-menuButton.addEventListener("click", toggleMenu);
+  setMenuState(menu.dataset.open === "true");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = menu.dataset.open === "true";
+    setMenuState(!isOpen);
+  });
+}

@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import Post from "../components/Post.astro";
 import Layout from "../layouts/Layout.astro";
 import "../assets/app.css";
 import Posts from "../components/Posts.astro";
@@ -18,8 +17,4 @@ const sortedPosts = posts.sort((a, b) => {
 	<div class="flex flex-col items-center justify-center mt-[100px]">
 		<Posts posts={sortedPosts} title="Blog Posts" />
 	</div>
-
-	<script>
-		import "../assets/app.ts";
-	</script>
 </Layout>
