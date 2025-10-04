@@ -29,13 +29,16 @@ themeController.addEventListener("change", toggleTheme);
 // Rotate the Square on Hero Page and add blur effect on header
 
 const square = document.querySelector(".square") as HTMLDivElement;
+let start: number;
 
-if (location.pathname === "/") {
-  document.addEventListener("scroll", () => {
+function step() {
     const scrollY: number = window.scrollY;
-    square.style.transform = `rotate(${scrollY / 10}deg)`;
-  });
+    square.style.transform = `rotate(${scrollY * 0.1}deg)`;
+
+    requestAnimationFrame(step);
 }
+
+requestAnimationFrame(step);
 
 // Smooth scroll to recent posts section
 const scrollButton = document.querySelector(
